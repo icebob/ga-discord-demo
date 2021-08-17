@@ -17,4 +17,4 @@ jobs:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       uses: Ilshidur/action-discord@master
       with:
-        args: ":tada: **The project '{{ EVENT_PAYLOAD.repository.name }}' has been released. Version: {{ EVENT_PAYLOAD.release.tag_name }}**:tada:\nChangelog: {{EVENT_PAYLOAD.release.html_url}}"
+        args: ":tada: **The '{{ EVENT_PAYLOAD.repository.name }}' {{ EVENT_PAYLOAD.release.tag_name }} has been released.**:tada:\nChangelog: {{EVENT_PAYLOAD.release.html_url}}"
